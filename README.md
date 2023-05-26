@@ -115,4 +115,21 @@ export default SignMessage;
 
 ## Connection Status
 
-Using the `useAccount` hook from wagmi, destructure the `isConnected` value.
+Using the `useAccount` hook from wagmi, destructure the `isConnected` value. Update your `App` function.
+
+```typescript
+function App() {
+  const { isConnected } = useAccount()
+
+  return (
+    <>
+      <WagmiConfig config={wagmiConfig}>
+        <h1>CriptoMexico 2023</h1>
+        <Web3Button />
+        {isConnected && <SignMessage />}
+      </WagmiConfig>
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    </>
+  );
+}
+```
