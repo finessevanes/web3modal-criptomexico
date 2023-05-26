@@ -1,1 +1,1 @@
-# web3modal-criptomexico
+# Web3Modal | CriptoMexico
