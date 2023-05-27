@@ -8,13 +8,12 @@ In your terminal run:
 npm create vite@latest
 ```
 
-Name your project, select React, and then TypeScript as the options in the terminal. Next, open your project and install the Web3Modal dependencies.
+Name your project, select your framework, and variant. Next, open your project and install the Web3Modal dependencies.
 
 ```bash
 cd EXAMPLE_PROJECT
 npm install
 npm install @web3modal/ethereum @web3modal/react wagmi viem
-npm run dev
 ```
 
 ## Create a Project ID
@@ -114,6 +113,12 @@ export default SignMessage;
 ```
 
 ## Connection Status
+
+Import `useAccount` from `wagmi`
+
+```bash
+import { configureChains, createConfig, WagmiConfig, useAccount } from 'wagmi'
+```
 
 Using the `useAccount` hook from wagmi, destructure the `isConnected` value. Update your `App` function.
 
